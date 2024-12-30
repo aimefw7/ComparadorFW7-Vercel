@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box top-left">
+        <h3>Valores do FW7</h3>
+        <textarea id="fw7-input" tabindex="1" placeholder="Informe os IDs do FW7 (com quebra de linha)"></textarea>
+    </div>
+    <div class="box top-right">
+        <h3>TEM NO FW E NÃO NO ERP (<span id="fw7-count">0</span>)</h3>
+        <p id="fw7-only">Nenhum</p>
+        <div class="buttons" id="fw7-buttons">
+            <button onclick="copyWithoutQuotes('fw7-only')">COPIAR SEM ASPAS</button>
+            <button onclick="copyWithQuotes('fw7-only')">COPIAR COM ASPAS</button>
+        </div>
+    </div>
+    <div class="box bottom-left">
+        <h3>Valores do ERP</h3>
+        <textarea id="erp-input" tabindex="2" placeholder="Informe os IDs do ERP (com quebra de linha)"></textarea>
+    </div>
+    <div class="box bottom-right">
+        <h3>TEM NO ERP E NÃO NO FW (<span id="erp-count">0</span>)</h3>
+        <p id="erp-only">Nenhum</p>
+        <div class="buttons" id="erp-buttons">
+            <button onclick="copyWithoutQuotes('erp-only')">COPIAR SEM ASPAS</button>
+            <button onclick="copyWithQuotes('erp-only')">COPIAR COM ASPAS</button>
+        </div>
+    </div>
+
+    <div id="copy-notification">Copiado com sucesso!</div>
+    <script src="script.js"></script>
+</body>
+</html>
